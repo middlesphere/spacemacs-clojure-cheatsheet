@@ -57,6 +57,7 @@ M-y - (immediately after C-y) paste previous values from ring buffer.
 C-; - correct previous word
 C-s - search forward
 C-r - search backward
+C-s C-s - search last query
 
 Neotree 
 =========
@@ -104,6 +105,7 @@ M-m * - smart search symbol
 M-m / - smart search symbol
 
 M-m p t - show project files
+M-m p k - Kill all buffers of current project
 
 
 Clojure Structural Edit
