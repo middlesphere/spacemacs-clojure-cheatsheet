@@ -1,0 +1,138 @@
+Useful links.
+1. https://gist.github.com/davoclavo/d41cd86ffda22f1649e4
+2. https://gist.github.com/robphoenix/9e4db767ab5c912fb558
+
+
+Spacemacs specifc
+==================
+M-m -  SPC key in emacs mode
+M-m f e d - edit Spacemacs config
+M-m f e R - reload Spacemacs config without restart
+
+Git (Magit)
+=============
+
+C-x 4 a - open Changelog
+M-m g s - git status
+c - commit
+C-c C-c - perform commit after comment 
+
+When in a git status buffer then available next keys:
+? - show help
+C-f - gitflow plugin commands
+
+
+Pop up and dim commands
+=======
+
+ A Cherry-picking    b Branching         B Bisecting         c Committing
+ d Diffing           D Change diffs      e Ediff dwimming    E Ediffing
+ f Fetching          F Pulling           l Logging           L Change logs
+ m Merging           M Remoting          ' Submodules        " Subtrees
+ P Pushing           r Rebasing          t Tagging           T Notes
+ _ Reverting         w Apply patches     W Format patches    O Resetting
+ y Show Refs         z Stashing          ! Running
+
+Applying changes
+ a Apply          s Stage          u Unstage
+ - Reverse        S Stage all      U Unstage all
+ x Discard
+
+Essential commands
+ g     refresh current buffer
+ TAB   toggle section at point
+ RET   visit thing at point
+ C-h m show all key bindings
+
+
+Editing
+==========
+C-/ - undo
+C-? - redo
+C-x h - select whole buffer
+C-w - cut selected region
+M-w - copy selected region
+C-y - paste
+M-y - (immediately after C-y) paste previous values from ring buffer.
+C-; - correct previous word
+C-s - search forward
+C-r - search backward
+
+Neotree 
+=========
+
+M-m f t - show Neotree window (q close)
+
+
+Window/Buffer
+============
+
+C-x b   - show buffers list 
+M-m 1   - switch to window 1
+M-m 2   - switch to window 2
+M-m TAB - go to previous buffer
+C-x b   - show buffers list
+C-x C-b - show interactive buffer list
+
+C-x 1   - maximize buffer (show only current buffer)
+M-m w m
+
+C-x 2   - split buffer bellow (horizontal split)
+M-m w s
+
+C-x 3   - split buffer right (vertical split)
+M-m w v
+
+S-u     - revert buffer (reload file)
+
+Files
+==========
+
+C-x C-s - save buffer to a file
+M-m f s
+
+M-m f r - find recent edited file
+
+
+Projects
+==========
+C-c p f - find file in project
+M-m p h - find a file in current project
+M-m p k - close all project buffers
+
+M-m * - smart search symbol
+M-m / - smart search symbol
+
+M-m p t - show project files
+
+
+Clojure Structural Edit
+===========
+C-S-9           -   wrap with ()
+C-right arrow   - move ) to forward
+C-left arrow    - move ) backward
+C-M-right arrow - move ( backward
+C-M-left arrow  - move ( forward
+C-=             - expand selection of region
+C-M-\ - format region
+M-.   - go to var definitions
+
+
+REPL
+=======
+C-c C-z         - go to appropriate REPL Buffer
+
+Cursor Movement
+================
+
+C-p   - go to previous line
+С-n   - go to next line
+
+Common
+=======
+
+C-x C-+ - increase font size
+C-x C-- - decrease font size
+C-x C-0 - set default font size
+
+
