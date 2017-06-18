@@ -50,6 +50,7 @@ Editing
 C-/ - undo
 C-? - redo
 C-x h - select whole buffer
+M-m b Y - copy whole buffer to clipboard
 C-w - cut selected region
 M-w - copy selected region
 C-y - paste
@@ -58,8 +59,10 @@ C-; - correct previous word
 C-s - search forward
 C-r - search backward
 C-s C-s - search last query
+C-x C-q - enable / disable read only mode 
 
-Neotree 
+
+Neotree
 =========
 
 M-m f t - show Neotree window (q close)
@@ -116,7 +119,8 @@ C-left arrow    - move ) backward
 C-M-right arrow - move ( backward
 C-M-left arrow  - move ( forward
 C-=             - expand selection of region
-C-M-\ - format region
+C-M-\           - format region
+M-q             - format current function
 M-.   - go to var definitions
 
 
@@ -129,6 +133,14 @@ Cursor Movement
 
 C-p   - go to previous line
 С-n   - go to next line
+C-f   - go left one symbol
+C-b   - go back one symbol
+M-e   - go to the end of sentence
+M-e   - go to the beginning of sentence
+M-f   - go the end of word
+M-a   - go to beginning of word
+M-<	  - Move the cursor to the beginning of the file
+M->   - Move the cursor to the end of the file
 
 Common
 =======
