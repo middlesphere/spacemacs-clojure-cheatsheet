@@ -9,40 +9,6 @@ M-m -  SPC key in emacs mode
 M-m f e d - edit Spacemacs config
 M-m f e R - reload Spacemacs config without restart
 
-Git (Magit)
-=============
-
-C-x 4 a - open Changelog
-M-m g s - git status
-c - commit
-C-c C-c - perform commit after comment 
-
-When in a git status buffer then available next keys:
-? - show help
-C-f - gitflow plugin commands
-
-
-Pop up and dim commands
-=======
-
- A Cherry-picking    b Branching         B Bisecting         c Committing
- d Diffing           D Change diffs      e Ediff dwimming    E Ediffing
- f Fetching          F Pulling           l Logging           L Change logs
- m Merging           M Remoting          ' Submodules        " Subtrees
- P Pushing           r Rebasing          t Tagging           T Notes
- _ Reverting         w Apply patches     W Format patches    O Resetting
- y Show Refs         z Stashing          ! Running
-
-Applying changes
- a Apply          s Stage          u Unstage
- - Reverse        S Stage all      U Unstage all
- x Discard
-
-Essential commands
- g     refresh current buffer
- TAB   toggle section at point
- RET   visit thing at point
- C-h m show all key bindings
 
 
 Editing
@@ -89,6 +55,8 @@ M-m w v
 
 S-u     - revert buffer (reload file)
 
+C-x n d - show only current function (C-x n w - return to full buffer)
+
 Files
 ==========
 
@@ -100,6 +68,7 @@ M-m f r - find recent edited file
 
 Projects
 ==========
+C-c p p - switch to another project
 C-c p f - find file in project
 M-m p h - find a file in current project
 M-m p k - close all project buffers
@@ -121,12 +90,21 @@ C-M-left arrow  - move ( forward
 C-=             - expand selection of region
 C-M-\           - format region
 M-q             - format current function
-M-.   - go to var definitions
+TAB             - format current line or selected region
+M-.             - go to var definitions
+M-\             - Delete all spaces and tabs around point. (I use this one a lot.)
+SPC s h         - highlight symbol, rename symbol etc.
+
+M-x mc/mark-all-like-this-dwim - rename symbol in current function
+
 
 
 REPL
 =======
 C-c C-z         - go to appropriate REPL Buffer
+C-c C-k         - Compile current buffer.
+C-c M-n         - Switch to namespace of current buffer.
+C-c C-f c n     - clear namespace unused imports
 
 Cursor Movement
 ================
@@ -150,3 +128,36 @@ C-x C-- - decrease font size
 C-x C-0 - set default font size
 
 
+Git (Magit)
+=============
+
+C-x 4 a - open Changelog
+M-m g s - git status
+c - commit
+C-c C-c - perform commit after comment 
+
+When in a git status buffer then available next keys:
+? - show help
+C-f - gitflow plugin commands
+
+
+Pop up and dim commands:
+
+ A Cherry-picking    b Branching         B Bisecting         c Committing
+ d Diffing           D Change diffs      e Ediff dwimming    E Ediffing
+ f Fetching          F Pulling           l Logging           L Change logs
+ m Merging           M Remoting          ' Submodules        " Subtrees
+ P Pushing           r Rebasing          t Tagging           T Notes
+ _ Reverting         w Apply patches     W Format patches    O Resetting
+ y Show Refs         z Stashing          ! Running
+
+Applying changes
+ a Apply          s Stage          u Unstage
+ - Reverse        S Stage all      U Unstage all
+ x Discard
+
+Essential commands
+ g     refresh current buffer
+ TAB   toggle section at point
+ RET   visit thing at point
+ C-h m show all key bindings
