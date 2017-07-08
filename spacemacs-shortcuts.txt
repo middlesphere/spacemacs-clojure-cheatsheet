@@ -1,4 +1,5 @@
 Useful links.
+0. https://github.com/syl20bnr/spacemacs/blob/master/doc/DOCUMENTATION.org
 1. https://gist.github.com/davoclavo/d41cd86ffda22f1649e4
 2. https://gist.github.com/robphoenix/9e4db767ab5c912fb558
 
@@ -25,7 +26,9 @@ C-; - correct previous word
 C-s - search forward
 C-r - search backward
 C-s C-s - search last query
-C-x C-q - enable / disable read only mode 
+C-x C-q - enable / disable read only mode
+C-x C-; - comment line
+M-;     - comment dwim
 
 
 Neotree
@@ -37,6 +40,8 @@ M-m f t - show Neotree window (q close)
 Window/Buffer
 ============
 
+C-x left - go to previous buffer
+C-x right - go to next buffer
 C-x b   - show buffers list 
 M-m 1   - switch to window 1
 M-m 2   - switch to window 2
@@ -96,15 +101,27 @@ M-\             - Delete all spaces and tabs around point. (I use this one a lot
 SPC s h         - highlight symbol, rename symbol etc.
 
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
+SPC m r r s                    - rename symbol in current function
+C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 
 
 
 REPL
 =======
+C-c C-e         - eval last s-exp
+C-M-x           - eval top level s-exp
+C-c M-;         - eval top level s-exp and insert as comment
 C-c C-z         - go to appropriate REPL Buffer
 C-c C-k         - Compile current buffer.
 C-c M-n         - Switch to namespace of current buffer.
 C-c C-f c n     - clear namespace unused imports
+SPC m r a m     - import missing namespace or class (cljr-add-missing-libspec)
+C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
+C-c C-f f u     - find usages of symbol
+C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
+C-c C-t n       - run test for the current namespace
+ 
+
 
 Cursor Movement
 ================
@@ -135,6 +152,8 @@ C-x 4 a - open Changelog
 M-m g s - git status
 c - commit
 C-c C-c - perform commit after comment 
+
+P - push, p - push master to remote origin
 
 When in a git status buffer then available next keys:
 ? - show help
