@@ -17,6 +17,7 @@ Editing
 C-/ - undo
 C-? - redo
 C-x h - select whole buffer
+M-h   - select current paragraph
 M-m b Y - copy whole buffer to clipboard
 C-w - cut selected region
 M-w - copy selected region
@@ -103,13 +104,14 @@ SPC s h         - highlight symbol, rename symbol etc.
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
 SPC m r r s                    - rename symbol in current function
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
-
+C-c C-f r s     - rename symbol in current function (refactor)
+C-c C-f a p     - add project dependency and load it to current repl without restart (hotreload)
 
 
 REPL
 =======
 C-c C-e         - eval last s-exp
-C-M-x           - eval top level s-exp
+C-M-x           - eval top level s-exp / stop debugging top-level form
 C-c M-;         - eval top level s-exp and insert as comment
 C-c C-z         - go to appropriate REPL Buffer
 C-c C-k         - Compile current buffer.
@@ -120,6 +122,7 @@ C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f f u     - find usages of symbol
 C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
 C-c C-t n       - run test for the current namespace
+
  
 
 
@@ -143,6 +146,10 @@ Common
 C-x C-+ - increase font size
 C-x C-- - decrease font size
 C-x C-0 - set default font size
+C-\     - enable disable RUS/EN
+
+M-x cljr-hotload-dependency - loads new deps from project.clj in current REPL without restart
+
 
 
 Git (Magit)
