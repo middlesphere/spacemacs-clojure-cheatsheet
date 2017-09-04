@@ -80,7 +80,7 @@ M-m p h - find a file in current project
 M-m p k - close all project buffers
 
 M-m * - smart search symbol
-M-m / - smart search symbol
+M-m / - smart search symbol (select s-exp or type, don't hit enter, just wait)
 
 M-m p t - show project files
 M-m p k - Kill all buffers of current project
@@ -88,7 +88,12 @@ M-m p k - Kill all buffers of current project
 
 Clojure Structural Edit
 ===========
-C-S-9           -   wrap with ()
+C-S-9           - wrap with ()
+M-r             - raise s-exp
+M-S             - split s-exp on to sexps
+M-J             - join two s-exp's
+M-s             - delete internal ( ). example (abcd (e | f g) klmn) -> (abcd e f g klmn)
+M-)             - jump to closing parent ),],} and newline
 C-right arrow   - move ) to forward
 C-left arrow    - move ) backward
 C-M-right arrow - move ( backward
