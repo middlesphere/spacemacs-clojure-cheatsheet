@@ -24,12 +24,21 @@ M-w - copy selected region
 C-y - paste
 M-y - (immediately after C-y) paste previous values from ring buffer.
 C-; - correct previous word
-C-s - search forward
-C-r - search backward
-C-s C-s - search last query
 C-x C-q - enable / disable read only mode
 C-x C-; - comment line
 M-;     - comment dwim
+C-c SPC - vertically align code (let, map)
+C-k     - kill line
+C-M-k   - kill s-exp
+
+Search
+=========
+C-s - search forward
+C-r - search backward
+C-s C-s - search last query
+M-m * - smart search symbol
+M-m / - smart search symbol (select s-exp or type, don't hit enter, just wait)
+M-m s s - find (search) symbol, show line and highlight it.
 
 
 Neotree
@@ -49,18 +58,13 @@ M-m 2   - switch to window 2
 M-m TAB - go to previous buffer
 C-x b   - show buffers list
 C-x C-b - show interactive buffer list
-
 C-x 1   - maximize buffer (show only current buffer)
 M-m w m
-
 C-x 2   - split buffer bellow (horizontal split)
 M-m w s
-
 C-x 3   - split buffer right (vertical split)
 M-m w v
-
 S-u     - revert buffer (reload file)
-
 C-x n d - show only current function (C-x n w - return to full buffer)
 
 Files
@@ -78,9 +82,6 @@ C-c p p - switch to another project
 C-c p f - find file in project
 M-m p h - find a file in current project
 M-m p k - close all project buffers
-
-M-m * - smart search symbol
-M-m / - smart search symbol (select s-exp or type, don't hit enter, just wait)
 
 M-m p t - show project files
 M-m p k - Kill all buffers of current project
