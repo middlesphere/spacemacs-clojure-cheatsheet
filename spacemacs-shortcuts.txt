@@ -28,8 +28,6 @@ C-x C-q - enable / disable read only mode
 C-x C-; - comment line
 M-;     - comment dwim
 C-c SPC - vertically align code (let, map)
-C-k     - kill line
-C-M-k   - kill s-exp
 
 Search
 =========
@@ -106,13 +104,18 @@ TAB             - format current line or selected region
 M-.             - go to var definitions
 M-\             - Delete all spaces and tabs around point. (I use this one a lot.)
 SPC s h         - highlight symbol, rename symbol etc.
+C-k             - kill line
+C-M-k           - kill s-exp
 
-M-x mc/mark-all-like-this-dwim - rename symbol in current function
-SPC m r r s                    - rename symbol in current function
+
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
-C-c C-f r s     - rename symbol in current function (refactor)
-C-c C-f a p     - add project dependency and load it to current repl without restart (hotreload)
+M-x mc/mark-all-like-this-dwim - rename symbol in current function
+C-c C-,                        - rename symbol in current function (bound to mc/mark-all-like-this-dwim) 
 
+SPC m r r s     - rename symbol in current project
+C-c C-f r s     - rename symbol in current project (refactor)
+C-c C-f a p     - add project dependency and load it to current repl without restart (hotreload)
+M-x cljr-hotload-dependency - loads new deps from project.clj in current REPL without restart
 
 REPL
 =======
@@ -153,8 +156,6 @@ C-x C-+ - increase font size
 C-x C-- - decrease font size
 C-x C-0 - set default font size
 C-\     - enable disable RUS/EN
-
-M-x cljr-hotload-dependency - loads new deps from project.clj in current REPL without restart
 
 
 
