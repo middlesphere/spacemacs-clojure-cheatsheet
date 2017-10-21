@@ -9,7 +9,7 @@ Spacemacs specifc
 M-m -  SPC key in emacs mode
 M-m f e d - edit Spacemacs config
 M-m f e R - reload Spacemacs config without restart
-
+M-m r y   - Show kill ring history 
 
 
 Editing
@@ -28,6 +28,10 @@ C-x C-q - enable / disable read only mode
 C-x C-; - comment line
 M-;     - comment dwim
 C-c SPC - vertically align code (let, map)
+M-m t f - show vertical line. Toggle display fill-column(column 80)
+M-t		  - swap words
+
+
 
 Search
 =========
@@ -37,6 +41,13 @@ C-s C-s - search last query
 M-m * - smart search symbol
 M-m / - smart search symbol (select s-exp or type, don't hit enter, just wait)
 M-m s s - find (search) symbol, show line and highlight it.
+
+Files
+=========
+
+M-m f R - rename current file.
+M-m f j - open current directory in dired mode.
+
 
 
 Neotree
@@ -92,7 +103,7 @@ M-r             - raise s-exp
 M-S             - split s-exp on to sexps
 M-J             - join two s-exp's
 M-s             - delete internal ( ). example (abcd (e | f g) klmn) -> (abcd e f g klmn)
-M-)             - jump to closing parent ),],} and newline
+M-0             - jump to closing parent ),],} and newline
 C-right arrow   - move ) to forward
 C-left arrow    - move ) backward
 C-M-right arrow - move ( backward
@@ -106,7 +117,8 @@ M-\             - Delete all spaces and tabs around point. (I use this one a lot
 SPC s h         - highlight symbol, rename symbol etc.
 C-k             - kill line
 C-M-k           - kill s-exp
-
+M-<up>		      - splice sexp killing backward (delete upper let i.e.)
+M-?		          - convolute sexp (swap upper and upper sexp)
 
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
@@ -118,7 +130,7 @@ C-c C-f a p     - add project dependency and load it to current repl without res
 M-x cljr-hotload-dependency - loads new deps from project.clj in current REPL without restart
 
 REPL
-=======
+=========
 C-c C-e         - eval last s-exp
 C-M-x           - eval top level s-exp / stop debugging top-level form
 C-c M-;         - eval top level s-exp and insert as comment
@@ -132,7 +144,17 @@ C-c C-f f u     - find usages of symbol
 C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
 C-c C-t n       - run test for the current namespace
 
- 
+
+Macros
+===============
+
+C-x (           - start record macro
+C-x )		        - stop record macro
+C-x e		        - run macro
+C-u N C-x e	    - repeat macro N number of times
+C-u 0 C-x e	    - repeat macro until end of buffer is reached.
+C-x C-k r	      - apply macro to each line in region.
+
 
 
 Cursor Movement
