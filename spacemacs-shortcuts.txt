@@ -49,6 +49,9 @@ M-m f R - rename current file.
 M-m f j - open current directory in dired mode.
 
 
+Dired mode
+===========
+a - select item and do not open another buffer
 
 Neotree
 =========
@@ -143,6 +146,7 @@ C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f f u     - find usages of symbol
 C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
 C-c C-t n       - run test for the current namespace
+C-c C-d C-d     - cider-doc: show documentation for given function
 
 
 Macros
