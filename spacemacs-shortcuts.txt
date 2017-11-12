@@ -97,6 +97,7 @@ M-m p k - close all project buffers
 
 M-m p t - show project files
 M-m p k - Kill all buffers of current project
+C-c p t - switch to current namespace test or back to a project file
 
 
 Clojure Structural Edit
