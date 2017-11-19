@@ -126,6 +126,8 @@ C-k             - kill line
 C-M-k           - kill s-exp
 M-<up>		      - splice sexp killing backward (delete upper let i.e.)
 M-?		          - convolute sexp (swap upper and upper sexp)
+C-M-e           - go to next function
+C-M-a           - go to previous function
 
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
