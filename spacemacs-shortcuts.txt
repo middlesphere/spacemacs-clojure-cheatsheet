@@ -26,6 +26,7 @@ M-y - (immediately after C-y) paste previous values from ring buffer.
 C-; - correct previous word
 C-x C-q - enable / disable read only mode
 C-x C-; - comment line
+s-;     - comment line (s - Mac Super)
 M-;     - comment dwim
 C-c SPC - vertically align code (let, map)
 M-m t f - show vertical line. Toggle display fill-column(column 80)
@@ -78,6 +79,8 @@ C-x 3   - split buffer right (vertical split)
 M-m w v
 S-u     - revert buffer (reload file)
 C-x n d - show only current function (C-x n w - return to full buffer)
+C-c <left>  - winner undo. restore window splits (winner-mode enabled, you can restore your previous window configuration)
+C-c <right> - winner redo. window configuration.
 
 Files
 ==========
