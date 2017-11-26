@@ -52,7 +52,7 @@ M-m f j - open current directory in dired mode.
 
 Dired mode
 ===========
-a - select item and do not open another buffer
+a - select item and open it in current (do not open another buffer)
 
 Neotree
 =========
