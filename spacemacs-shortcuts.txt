@@ -128,6 +128,8 @@ M-<up>		      - splice sexp killing backward (delete upper let i.e.)
 M-?		          - convolute sexp (swap upper and upper sexp)
 C-M-e           - go to next function
 C-M-a           - go to previous function
+C-M-u           - go to one level up
+C-M-d           - go to one level down (go to inside S-exp)
 
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
@@ -144,7 +146,7 @@ C-c C-e         - eval last s-exp
 C-M-x           - eval top level s-exp / stop debugging top-level form
 C-c M-;         - eval top level s-exp and insert as comment
 C-c C-z         - go to appropriate REPL Buffer
-C-c C-k         - Compile current buffer.
+C-c C-k         - Compile current buffer (refresh screen after enlighten mode).
 C-c M-n         - Switch to namespace of current buffer.
 C-c C-f c n     - clear namespace unused imports
 SPC m r a m     - import missing namespace or class (cljr-add-missing-libspec)
