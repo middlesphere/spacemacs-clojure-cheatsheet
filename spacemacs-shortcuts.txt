@@ -126,11 +126,6 @@ C-k             - kill line
 C-M-k           - kill s-exp
 M-<up>		      - splice sexp killing backward (delete upper let i.e.)
 M-?		          - convolute sexp (swap upper and upper sexp)
-C-M-e           - go to next function
-C-M-a           - go to previous function
-C-M-u           - go to one level up
-C-M-d           - go to one level down (go to inside S-exp)
-
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
 C-c C-,                        - rename symbol in current function (bound to mc/mark-all-like-this-dwim) 
@@ -154,6 +149,7 @@ C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f f u     - find usages of symbol
 C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
 C-c C-t n       - run test for the current namespace
+C-c p t         - switch between test and code namespace
 C-c C-d C-d     - cider-doc: show documentation for given function
 
 
@@ -172,16 +168,21 @@ C-x C-k r	      - apply macro to each line in region.
 Cursor Movement
 ================
 
-C-p   - go to previous line
-С-n   - go to next line
-C-f   - go left one symbol
-C-b   - go back one symbol
-M-e   - go to the end of sentence
-M-e   - go to the beginning of sentence
-M-f   - go the end of word
-M-a   - go to beginning of word
-M-<	  - Move the cursor to the beginning of the file
-M->   - Move the cursor to the end of the file
+C-p             - go to previous line
+С-n             - go to next line
+C-f             - go left one symbol
+C-b             - go back one symbol
+M-e             - go to the end of sentence
+M-e             - go to the beginning of sentence
+M-f             - go the end of word
+M-a             - go to beginning of word
+M-<	            - Move the cursor to the beginning of the file
+M->             - Move the cursor to the end of the file
+C-M-e           - go to next function
+C-M-a           - go to previous function
+C-M-u           - go to one level up
+C-M-d           - go to one level down (go to inside S-exp)
+
 
 Common
 =======
