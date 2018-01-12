@@ -178,6 +178,7 @@ M-f             - go the end of word
 M-a             - go to beginning of word
 M-<	            - Move the cursor to the beginning of the file
 M->             - Move the cursor to the end of the file
+M-g g           - go to line <Number>
 C-M-e           - go to next function
 C-M-a           - go to previous function
 C-M-u           - go to one level up
