@@ -48,7 +48,7 @@ Files
 
 M-m f R - rename current file.
 M-m f j - open current directory in dired mode.
-
+M-m f r - show recent files
 
 Dired mode
 ===========
@@ -90,7 +90,6 @@ M-m f s
 
 M-m f r - find recent edited file
 
-
 Projects
 ==========
 C-c p p - switch to another project
@@ -128,7 +127,9 @@ M-<up>		      - splice sexp killing backward (delete upper let i.e.)
 M-?		          - convolute sexp (swap upper and upper sexp)
 C-c C-f         - prefix to all clj-refactor fns https://github.com/clojure-emacs/clj-refactor.el/wiki
 M-x mc/mark-all-like-this-dwim - rename symbol in current function
-C-c C-,                        - rename symbol in current function (bound to mc/mark-all-like-this-dwim) 
+C-c C-,                        - rename symbol in current function (bound to mc/mark-all-like-this-dwim)
+M-/             - yasnippet auto completions (defn let ...)
+M-m s h         - highlight symbol under the point in buffer 
 
 SPC m r r s     - rename symbol in current project
 C-c C-f r s     - rename symbol in current project (refactor)
@@ -147,7 +148,7 @@ C-c C-f c n     - clear namespace unused imports
 SPC m r a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f f u     - find usages of symbol
-C-c C-f h d     - hot load dependency (allow to not reload aREPL after addition of lib to project.clj)
+C-c C-f h d     - hot load dependency (allows use new dependency without restart a REPL)
 C-c C-t n       - run test for the current namespace
 C-c p t         - switch between test and code namespace
 C-c C-d C-d     - cider-doc: show documentation for given function
@@ -163,6 +164,13 @@ C-u N C-x e	    - repeat macro N number of times
 C-u 0 C-x e	    - repeat macro until end of buffer is reached.
 C-x C-k r	      - apply macro to each line in region.
 
+Registers
+===============
+
+C-x r SPC <any letter>  - save cursor position in register with name <any letter>
+C-x r j <any letter>    - jump to cursor position saved in register with name <any letter>
+C-x r s <any letter>    - copy region into register <any letter>
+C-x r i <any letter>    - insert text from register <any letter>
 
 
 Cursor Movement
