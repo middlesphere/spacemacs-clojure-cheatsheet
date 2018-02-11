@@ -31,7 +31,7 @@ M-;     - comment dwim
 C-c SPC - vertically align code (let, map)
 M-m t f - show vertical line. Toggle display fill-column(column 80)
 M-t		  - swap words
-
+M-x ediff-toggle-multiframe M-x ediff-buffers  - compapre buffers
 
 
 Search
@@ -212,29 +212,8 @@ c - commit
 C-c C-c - perform commit after comment 
 
 P - push, p - push master to remote origin
+M-x magit-file-checkout or k in magit status  - discard changes (revert file)
 
 When in a git status buffer then available next keys:
 ? - show help
 C-f - gitflow plugin commands
-
-
-Pop up and dim commands:
-
- A Cherry-picking    b Branching         B Bisecting         c Committing
- d Diffing           D Change diffs      e Ediff dwimming    E Ediffing
- f Fetching          F Pulling           l Logging           L Change logs
- m Merging           M Remoting          ' Submodules        " Subtrees
- P Pushing           r Rebasing          t Tagging           T Notes
- _ Reverting         w Apply patches     W Format patches    O Resetting
- y Show Refs         z Stashing          ! Running
-
-Applying changes
- a Apply          s Stage          u Unstage
- - Reverse        S Stage all      U Unstage all
- x Discard
-
-Essential commands
- g     refresh current buffer
- TAB   toggle section at point
- RET   visit thing at point
- C-h m show all key bindings
