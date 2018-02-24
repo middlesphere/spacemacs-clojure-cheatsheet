@@ -149,7 +149,8 @@ C-c C-f a m     - import missing namespace or class (cljr-add-missing-libspec)
 C-c C-f f u     - find usages of symbol
 C-c C-f h d     - hot load dependency (allows use new dependency without restart a REPL)
 C-c C-t n       - run test for the current namespace
-M-m p a         - switch between test and code namespace (Old key: C-c p t)
+M-m p a         - switch between test and code namespace
+C-c p t         - switch between test and code namespace
 C-c C-d C-d     - cider-doc: show documentation for given function
 
 
