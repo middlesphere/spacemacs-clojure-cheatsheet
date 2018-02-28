@@ -228,6 +228,7 @@ z a - apply stash (continue to work with stahed changes). don't forget to be in 
 ;;Log
 l l - show log tree
 l b - checkout from point in time
+l h - show all log history in current branch
 l n - create new branch from point in time
 
 
