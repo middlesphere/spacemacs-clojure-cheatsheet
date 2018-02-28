@@ -153,6 +153,9 @@ M-m p a         - switch between test and code namespace
 C-c p t         - switch between test and code namespace
 C-c C-d C-d     - cider-doc: show documentation for given function
 
+;;change REPL params in cider before start
+M-x set-varaible cider-lein-parameters "with-profile +mike-local repl :headless :host ::"
+
 
 Macros
 ===============
@@ -213,6 +216,11 @@ C-c C-c - perform commit after comment
 
 P - push, p - push master to remote origin
 M-x magit-file-checkout or k in magit status  - discard changes (revert file)
+
+C-c ^ m - take mine during merging
+C-c ^ o - take other during merging
+
+z k - drop stash (delete it)
 
 When in a git status buffer then available next keys:
 ? - show help
