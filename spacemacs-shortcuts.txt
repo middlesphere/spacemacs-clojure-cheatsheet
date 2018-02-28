@@ -220,7 +220,18 @@ M-x magit-file-checkout or k in magit status  - discard changes (revert file)
 C-c ^ m - take mine during merging
 C-c ^ o - take other during merging
 
-z k - drop stash (delete it)
+;;Stashing
+z z - save changes without commit (create stash)
+z k - drop stash (delete it) after work done
+z a - apply stash (continue to work with stahed changes). don't forget to be in correct branch
+
+;;Log
+l l - show log tree
+l b - checkout from point in time
+l n - create new branch from point in time
+
+
+
 
 When in a git status buffer then available next keys:
 ? - show help
