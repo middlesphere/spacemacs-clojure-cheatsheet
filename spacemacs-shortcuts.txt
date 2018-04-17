@@ -230,6 +230,7 @@ l l - show log tree
 l b - checkout from point in time
 l h - show all log history in current branch
 l n - create new branch from point in time
+l o - look whole tree of log
 
 M-x magit-reset-soft - reset project to commit without delete changes
 M-x magit-reset-hard - reset project to commit (delete changes)
