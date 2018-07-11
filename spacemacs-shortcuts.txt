@@ -212,7 +212,10 @@ Git (Magit)
 C-x 4 a - open Changelog
 M-m g s - git status
 c - commit
-C-c C-c - perform commit after comment 
+C-c C-c - perform commit after comment
+
+f a - fetch all remote branches
+b l - checkout local branch
 
 P - push, p - push master to remote origin
 M-x magit-file-checkout or k in magit status  - discard changes (revert file)
