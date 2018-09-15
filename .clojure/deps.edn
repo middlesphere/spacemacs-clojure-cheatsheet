@@ -1,0 +1,104 @@
+;; The deps.edn file describes the information needed to build a classpath.
+;;
+;; When using the `clojure` or `clj` script, there are several deps.edn files
+;; that are combined:
+;; - install-level
+;; - user level (this file)
+;; - project level (current directory when invoked)
+;;
+;; For all attributes other than :paths, these config files are merged left to right.
+;; Only the last :paths is kept and others are dropped.
+
+{
+ ;; Paths
+ ;;   Directories in the current project to include in the classpath
+
+ ;; :paths ["src"]
+
+ ;; External dependencies
+ 
+ ;; :deps {
+ ;;   org.clojure/clojure {:mvn/version "1.9.0-RC1"}
+ ;; }
+
+ ;; Aliases
+ ;;   resolve-deps aliases (-R) affect dependency resolution, options:
+ ;;     :extra-deps - specifies extra deps to add to :deps
+ ;;     :override-deps - specifies a coordinate to use instead of that in :deps
+ ;;     :default-deps - specifies a coordinate to use for a lib if one isn't found
+ ;;   make-classpath aliases (-C) affect the classpath generation, options:
+ ;;     :extra-paths - vector of additional paths to add to the classpath
+ ;;     :classpath-overrides - map of lib to path that overrides the result of resolving deps
+
+ ;; :aliases {
+ ;;   :deps {:extra-deps {org.clojure/tools.deps.alpha {:mvn/version "0.2.183"}}}
+ ;;   :test {:extra-paths ["test"]}
+ ;; }
+
+ ;; Provider attributes
+
+ ;; :mvn/repos {
+ ;;   "central" {:url "https://repo1.maven.org/maven2/"}
+ ;;   "clojars" {:url "https://clojars.org/repo/"}
+ ;; }
+
+ :deps {
+        
+        ;; org.clojure/spec.alpha       {:mvn/version "0.2.176"}
+        ;; org.clojure/core.specs.alpha {:mvn/version "0.2.44"}
+        ;; org.clojure/clojure {:mvn/version "1.10.0-alpha7"}
+        }
+
+ 
+ :aliases {:1.9 {:override-deps {org.clojure/clojure          {:mvn/version "1.9.0"}
+                                 org.clojure/spec.alpha       {:mvn/version "0.2.176"}
+                                 org.clojure/core.specs.alpha {:mvn/version "0.2.44"}}}
+           
+           :1.10 {:override-deps {org.clojure/clojure          {:mvn/version "RELEASE"}
+                                  org.clojure/spec.alpha       {:mvn/version "0.2.176"}
+                                  org.clojure/core.specs.alpha {:mvn/version "0.2.44"}}}
+
+           ;; (use 'clojure.tools.deps.alpha.repl)
+           :add-lib {:extra-deps {org.clojure/tools.deps.alpha
+                                  {:git/url "https://github.com/clojure/tools.deps.alpha.git"
+                                   :sha     "d492e97259c013ba401c5238842cd3445839d020"}}}
+
+           
+
+           ;;(require 'spyscope.core)
+           ;;
+           :debug-tools {:extra-deps    {vvvvalvalval/scope-capture {:mvn/version "0.3.1"}
+                                         org.clojure/tools.trace    {:mvn/version "0.7.9"}
+                                         philoskim/debux            {:mvn/version "0.5.0"}
+                                         spyscope                   {:mvn/version "0.1.7-SNAPSHOT"}
+                                         com.bhauman/spell-spec     {:mvn/version "0.1.1"}}
+                         :override-deps {org.clojure/clojurescript {:mvn/version "1.10.238"}}}
+
+
+           ;; (require 'rebel-readline.main)
+           ;; (rebel-readline.main/-main)
+           :repl {:extra-deps {cider/cider-nrepl          {:mvn/version "0.18.0"}
+                               nrepl                      {:mvn/version "0.4.5"}
+                               refactor-nrepl             {:mvn/version "2.4.0"}
+                               com.bhauman/rebel-readline {:mvn/version "0.1.4"}}}
+
+
+           :xb {:jvm-opts ["--add-modules" "java.xml.bind"]}
+           
+           :test {:extra-paths ["test"]
+                  :extra-deps  {org.clojure/test.check    {:mvn/version "0.9.0"}
+                                com.cognitect/test-runner {:git/url "https://github.com/cognitect-labs/test-runner"
+                                                           :sha     "028a6d41ac9ac5d5c405dfc38e4da6b4cc1255d5" }}
+                  :main-opts   ["-m" "cognitect.test-runner"
+                                "-d" "test"]}
+
+           :new {:extra-deps {seancorfield/clj-new
+                              {:git/url "https://github.com/seancorfield/clj-new"
+                               :sha     "108f27159501f8ce12564b398b0ea50def3892b1"}}
+                 :main-opts  ["-m" "clj-new.create"]}
+
+
+           :rebel {:extra-deps {com.bhauman/rebel-readline {:mvn/version "0.1.4"}}
+                   :main-opts  ["-m" "rebel-readline.main"]}}
+ }
+

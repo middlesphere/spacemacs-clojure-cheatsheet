@@ -61,7 +61,7 @@ M-m f t - show Neotree window (q close)
 
 
 Window/Buffer
-============
+===============
 
 C-x left - go to previous buffer
 C-x right - go to next buffer
@@ -129,6 +129,7 @@ M-x mc/mark-all-like-this-dwim - rename symbol in current function
 C-c C-,                        - rename symbol in current function (bound to mc/mark-all-like-this-dwim)
 M-/             - yasnippet auto completions (defn let ...)
 M-m s h         - highlight symbol under the point in buffer 
+C-c C-.         - find/search namespace
 
 SPC m r r s     - rename symbol in current project
 C-c C-f r s     - rename symbol in current project (refactor)
